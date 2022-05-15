@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate ="~{layouts/loginLayout}">
+<head>
+    <!--    thymeleaf layout dialect가 contents페이지의 head태그를 layout의 head태그에 자동으로 추가해준다. -->
+    <!--    필요힌 css, script 추가영역 -->
+</head>
+<div layout:fragment="content">
+    <section class="content-section bg-light" id="about">
+        <div class="container px-4 px-lg-5 text-center">
+            <main class="form-signin">
+                <div class="container border rounded flex-md-row mb-4 shadow-sm h-md-250">
+                    <form>
+                        <h1 class="h3 m-3 fw-normal">로그인</h1>
+
+                        <div class="form-floating m-3">
+                            <input type="text" class="form-control" id="username" placeholder="아이디를 입력하세요.">
+                            <label for="username">아이디</label>
+                        </div>
+                        <div class="form-floating m-3">
+                            <input type="password" class="form-control" id="password" placeholder="패스워드를 입력하세요.">
+                            <label for="password">패스워드</label>
+                        </div>
+                        <button id="login" class="w-100 btn btn-lg btn-primary mb-3" type="submit">로그인</button>
+                        <a href="/joinPage" class="w-100 btn btn-lg btn-primary mb-3">회원가입</a>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </section>
+</div>
+</html>
