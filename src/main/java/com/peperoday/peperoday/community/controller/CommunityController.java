@@ -9,7 +9,7 @@ public class CommunityController {
     @GetMapping("/communityHome")
     public String community(){
 
-        return "/community/communityHome";
+        return "communityIndex";
     }
 
     @GetMapping("/communityBoard")
