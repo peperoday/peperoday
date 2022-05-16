@@ -1,5 +1,6 @@
 package com.peperoday.peperoday.community.service;
 
+import com.peperoday.peperoday.community.domain.Community;
 import com.peperoday.peperoday.community.dto.CommunitySaveRequestDto;
 import com.peperoday.peperoday.community.dto.CommunityUpdateRequestDto;
 import com.peperoday.peperoday.community.repository.CommunityRepository;
@@ -22,6 +23,10 @@ public class CommunityService {
 
     @Transactional
     public Long update(Long srno, CommunityUpdateRequestDto requestDto){
-        return null;
+        Community community = communityRepository.findById(srno).orElseThrow(()->new IllegalArgumentException("해당 게시글이 없습니다. srno="+srno));
+
+        community.update(requestDto.getTitle(), requestDto.getContent());
+
+        return srno;
     }
 }

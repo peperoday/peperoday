@@ -17,7 +17,7 @@ public class CommunityApiController {
         return communityService.save(requestDto);
     }
 
-    @PutMapping("/api/v1/community/{community_srno}")
+    @PutMapping("/api/v1/community/{srno}")
     public Long update(@PathVariable Long srno, @RequestBody CommunityUpdateRequestDto reqeuestDto){
         return communityService.update(srno, reqeuestDto);
     }
