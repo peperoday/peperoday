@@ -1,4 +1,4 @@
-package com.peperoday.peperoday.utiles;
+package com.peperoday.peperoday.domain;
 
 import lombok.Getter;
 import org.springframework.data.annotation.CreatedBy;

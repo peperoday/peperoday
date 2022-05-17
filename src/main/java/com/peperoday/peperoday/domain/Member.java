@@ -1,6 +1,5 @@
-package com.peperoday.peperoday.member.domain;
+package com.peperoday.peperoday.domain;
 
-import com.peperoday.peperoday.utiles.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

@@ -1,6 +1,6 @@
-package com.peperoday.peperoday.community.dto;
+package com.peperoday.peperoday.dto;
 
-import com.peperoday.peperoday.community.domain.Community;
+import com.peperoday.peperoday.domain.Community;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

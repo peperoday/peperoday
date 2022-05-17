@@ -1,11 +1,10 @@
-package com.peperoday.peperoday.community.service;
+package com.peperoday.peperoday.service;
 
-import com.peperoday.peperoday.community.domain.Community;
-import com.peperoday.peperoday.community.dto.CommunitySaveRequestDto;
-import com.peperoday.peperoday.community.dto.CommunityUpdateRequestDto;
-import com.peperoday.peperoday.community.repository.CommunityRepository;
+import com.peperoday.peperoday.domain.Community;
+import com.peperoday.peperoday.dto.CommunitySaveRequestDto;
+import com.peperoday.peperoday.dto.CommunityUpdateRequestDto;
+import com.peperoday.peperoday.repository.CommunityRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.annotation.Transient;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -18,7 +17,7 @@ public class CommunityService {
 
     @Transactional
     public Long save(CommunitySaveRequestDto requestDto){
-        return communityRepository.save(requestDto.toEntity()).getCommunity_id();
+        return communityRepository.save(requestDto.toEntity()).getCommunity_srno();
     }
 
     @Transactional

@@ -1,6 +1,5 @@
-package com.peperoday.peperoday.community.domain;
+package com.peperoday.peperoday.domain;
 
-import com.peperoday.peperoday.utiles.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,12 +9,11 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 @Entity
-//@Table(name = "TB_COMMUNITY_M")
 public class Community extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long community_id;
+    private Long community_srno;
 
     @Column(nullable = false)
     private String mber_id;

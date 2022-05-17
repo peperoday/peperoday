@@ -1,22 +1,24 @@
-package com.peperoday.peperoday.member.controller;
+package com.peperoday.peperoday.controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class MemberApiController {
+public class MemberController {
 
     //로그인 페이지 이동
-    @GetMapping("/login")
+    @GetMapping("/loginPage")
     public String loginPage(){
 
-        return "login";
+        return "loginPage";
     }
 
     //회원가입 페이지 이동
-    @GetMapping("/join")
+    @GetMapping("/joinPage")
     public String joinPage(){
 
-        return "join";
+        return "joinPage";
     }
+
 }

@@ -1,4 +1,4 @@
-package com.peperoday.peperoday.community.dto;
+package com.peperoday.peperoday.dto;
 
 import lombok.Builder;
 import lombok.Getter;

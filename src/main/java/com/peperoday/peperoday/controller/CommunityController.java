@@ -1,16 +1,28 @@
-package com.peperoday.peperoday.community.controller;
+package com.peperoday.peperoday.controller;
 
-import com.peperoday.peperoday.community.dto.CommunitySaveRequestDto;
-import com.peperoday.peperoday.community.dto.CommunityUpdateRequestDto;
-import com.peperoday.peperoday.community.service.CommunityService;
+import com.peperoday.peperoday.dto.CommunitySaveRequestDto;
+import com.peperoday.peperoday.dto.CommunityUpdateRequestDto;
+import com.peperoday.peperoday.service.CommunityService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 @RequiredArgsConstructor
 @RestController
-public class CommunityApiController {
+public class CommunityController {
 
     private final CommunityService communityService;
+
+    @GetMapping("/communityHome")
+    public String community(){
+
+        return "communityIndex";
+    }
+
+    @GetMapping("/communityBoard")
+    public String communityBoard(){
+
+        return "/community/communityBoard";
+    }
 
     @PostMapping("/api/v1/community")
     public Long save(@RequestBody CommunitySaveRequestDto requestDto){
