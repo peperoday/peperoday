@@ -1,8 +1,8 @@
 package com.peperoday.peperoday.service;
 
 import com.peperoday.peperoday.domain.Community;
-import com.peperoday.peperoday.dto.CommunitySaveRequestDto;
-import com.peperoday.peperoday.dto.CommunityUpdateRequestDto;
+import com.peperoday.peperoday.dto.request.CommunitySaveRequestDto;
+import com.peperoday.peperoday.dto.request.CommunityUpdateRequestDto;
 import com.peperoday.peperoday.repository.CommunityRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

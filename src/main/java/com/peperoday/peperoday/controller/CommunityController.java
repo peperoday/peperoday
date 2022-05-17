@@ -1,7 +1,7 @@
 package com.peperoday.peperoday.controller;
 
-import com.peperoday.peperoday.dto.CommunitySaveRequestDto;
-import com.peperoday.peperoday.dto.CommunityUpdateRequestDto;
+import com.peperoday.peperoday.dto.request.CommunitySaveRequestDto;
+import com.peperoday.peperoday.dto.request.CommunityUpdateRequestDto;
 import com.peperoday.peperoday.service.CommunityService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;

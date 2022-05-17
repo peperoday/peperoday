@@ -1,4 +1,4 @@
-package com.peperoday.peperoday.dto;
+package com.peperoday.peperoday.dto.request;
 
 import com.peperoday.peperoday.domain.Community;
 import lombok.Builder;
