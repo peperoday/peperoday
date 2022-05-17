@@ -12,20 +12,9 @@ public class CommunityController {
 
     private final CommunityService communityService;
 
-    @GetMapping("/communityHome")
-    public String community(){
-
-        return "communityIndex";
-    }
-
-    @GetMapping("/communityBoard")
-    public String communityBoard(){
-
-        return "/community/communityBoard";
-    }
-
     @PostMapping("/api/v1/community")
     public Long save(@RequestBody CommunitySaveRequestDto requestDto){
+
         return communityService.save(requestDto);
     }
 

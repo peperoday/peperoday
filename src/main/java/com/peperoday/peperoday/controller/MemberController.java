@@ -8,17 +8,17 @@ import org.springframework.web.bind.annotation.RestController;
 public class MemberController {
 
     //로그인 페이지 이동
-    @GetMapping("/loginPage")
-    public String loginPage(){
+    @GetMapping("/login")
+    public String login(){
 
-        return "loginPage";
+        return "login";
     }
 
     //회원가입 페이지 이동
-    @GetMapping("/joinPage")
-    public String joinPage(){
+    @GetMapping("/join")
+    public String join(){
 
-        return "joinPage";
+        return "join";
     }
 
 }
