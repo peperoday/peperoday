@@ -8,27 +8,29 @@ import javax.persistence.*;
 
 @Getter
 @NoArgsConstructor
+@Table(name = "TB_BOARD_M")
 @Entity
-public class Community extends BaseTimeEntity {
+public class Board extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long community_srno;
+    @Column(name = "BOARD_SRNO")
+    private Long boardSrno;
 
-    @Column(nullable = false)
-    private String mber_id;
+    @Column(name = "MBER_ID")
+    private String mberId;
 
-    @Column(length = 100, nullable = false)
+    @Column(name = "TITLE")
     private String title;
 
-    @Column(nullable = false)
+    @Column(name = "CONTENT")
     private String content;
-
+    @Column(name = "AUTHOR")
     private String author;
 
     @Builder
-    public Community(String mber_id, String title, String content, String author){
-        this.mber_id = mber_id;
+    public Board(String mberId, String title, String content, String author){
+        this.mberId = mberId;
         this.title = title;
         this.content = content;
         this.author = author;

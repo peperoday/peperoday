@@ -1,30 +1,30 @@
 package com.peperoday.peperoday.dto.request;
 
-import com.peperoday.peperoday.domain.Community;
+import com.peperoday.peperoday.domain.Board;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Getter
 @NoArgsConstructor
-public class CommunitySaveRequestDto {
+public class BoardSaveRequestDto {
 
-    private String mber_id;
+    private String mberId;
     private String title;
     private String content;
     private String author;
 
     @Builder
-    public CommunitySaveRequestDto(String mber_id, String title, String content, String author){
-        this.mber_id = mber_id;
+    public BoardSaveRequestDto(String mberId, String title, String content, String author){
+        this.mberId = mberId;
         this.title = title;
         this.content = content;
         this.author = author;
     }
 
-    public Community toEntity(){
-        return Community.builder()
-                .mber_id(mber_id)
+    public Board toEntity(){
+        return Board.builder()
+                .mberId(mberId)
                 .title(title)
                 .content(content)
                 .author(author)
