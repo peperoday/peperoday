@@ -8,7 +8,7 @@ import javax.persistence.*;
 
 @Getter
 @NoArgsConstructor
-@Table(name = "TB_BOARD_M")
+@Table(name = "BOARD")
 @Entity
 public class Board extends BaseTimeEntity {
 
@@ -25,15 +25,12 @@ public class Board extends BaseTimeEntity {
 
     @Column(name = "CONTENT")
     private String content;
-    @Column(name = "AUTHOR")
-    private String author;
 
     @Builder
-    public Board(String mberId, String title, String content, String author){
+    public Board(String mberId, String title, String content){
         this.mberId = mberId;
         this.title = title;
         this.content = content;
-        this.author = author;
     }
 
     public void update(String title, String content){

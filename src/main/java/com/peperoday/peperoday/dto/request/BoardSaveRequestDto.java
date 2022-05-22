@@ -12,14 +12,12 @@ public class BoardSaveRequestDto {
     private String mberId;
     private String title;
     private String content;
-    private String author;
 
     @Builder
-    public BoardSaveRequestDto(String mberId, String title, String content, String author){
+    public BoardSaveRequestDto(String mberId, String title, String content){
         this.mberId = mberId;
         this.title = title;
         this.content = content;
-        this.author = author;
     }
 
     public Board toEntity(){
@@ -27,7 +25,6 @@ public class BoardSaveRequestDto {
                 .mberId(mberId)
                 .title(title)
                 .content(content)
-                .author(author)
                 .build();
     }
 }

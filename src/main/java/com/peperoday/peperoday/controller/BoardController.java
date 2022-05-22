@@ -13,19 +13,19 @@ public class BoardController {
 
     private final BoardService boardService;
 
-    @PostMapping("/api/v1/board")
+    @PostMapping("/api/board")
     public Long save(@RequestBody BoardSaveRequestDto requestDto){
 
         return boardService.save(requestDto);
     }
 
-    @PutMapping("/api/v1/board/{srno}")
+    @PutMapping("/api/board/{srno}")
     public Long update(@PathVariable Long srno, @RequestBody BoardUpdateRequestDto reqeuestDto){
 
         return boardService.update(srno, reqeuestDto);
     }
 
-    @GetMapping("/api/v1/board/{srno}")
+    @GetMapping("/api/board/{srno}")
     public BoardResponseDto findById(@PathVariable Long srno){
 
         return boardService.findById(srno);
