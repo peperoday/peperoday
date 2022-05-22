@@ -3,11 +3,15 @@ package com.peperoday.peperoday.service;
 import com.peperoday.peperoday.domain.Board;
 import com.peperoday.peperoday.dto.request.BoardSaveRequestDto;
 import com.peperoday.peperoday.dto.request.BoardUpdateRequestDto;
+import com.peperoday.peperoday.dto.response.BoardListResponseDto;
 import com.peperoday.peperoday.dto.response.BoardResponseDto;
 import com.peperoday.peperoday.repository.BoardRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 
 @RequiredArgsConstructor
@@ -34,5 +38,10 @@ public class BoardService {
         Board entity = boardRepository.findById(srno).orElseThrow(()->new IllegalArgumentException("해당 게시글이 없습니다. srno"+ srno));
 
         return new BoardResponseDto(entity);
+    }
+
+    @Transactional(readOnly = true)
+    public List<BoardListResponseDto> findAllDesc(){
+        return boardRepository.findAllDesc().stream().map(BoardListResponseDto::new).collect(Collectors.toList());
     }
 }

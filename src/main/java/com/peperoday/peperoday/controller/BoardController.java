@@ -4,6 +4,7 @@ import com.peperoday.peperoday.dto.request.BoardSaveRequestDto;
 import com.peperoday.peperoday.dto.request.BoardUpdateRequestDto;
 import com.peperoday.peperoday.dto.response.BoardResponseDto;
 import com.peperoday.peperoday.service.BoardService;
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -30,4 +31,5 @@ public class BoardController {
 
         return boardService.findById(srno);
     }
+
 }
