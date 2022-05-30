@@ -12,12 +12,14 @@ public class BoardSaveRequestDto {
     private String mberId;
     private String title;
     private String content;
+    private boolean delStatus;
 
     @Builder
-    public BoardSaveRequestDto(String mberId, String title, String content){
+    public BoardSaveRequestDto(String mberId, String title, String content, boolean delStatus){
         this.mberId = mberId;
         this.title = title;
         this.content = content;
+        this.delStatus = delStatus;
     }
 
     public Board toEntity(){
@@ -25,6 +27,7 @@ public class BoardSaveRequestDto {
                 .mberId(mberId)
                 .title(title)
                 .content(content)
+                .delStatus(false)
                 .build();
     }
 }

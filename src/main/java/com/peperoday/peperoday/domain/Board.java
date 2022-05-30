@@ -26,11 +26,15 @@ public class Board extends BaseTimeEntity {
     @Column(name = "CONTENT")
     private String content;
 
+    @Column(name = "DEL_STATUS")
+    private boolean delStatus;
+
     @Builder
-    public Board(String mberId, String title, String content){
+    public Board(String mberId, String title, String content, boolean delStatus){
         this.mberId = mberId;
         this.title = title;
         this.content = content;
+        this.delStatus = delStatus;
     }
 
     public void update(String title, String content){
